@@ -1,0 +1,36 @@
+{
+    "name": "fancybox-plus",
+    "title": "Fancybox Plus",
+    "version": "1.3.4",
+    "description": "jQuery lightbox and modal window plugin.",
+    "author": {
+        "name": "Igor Lino",
+        "url": "http://igorlino.github.io/fancybox-plus/"
+    },
+    "license": "MIT",
+    "main": [
+        "src/jquery.easing-1.3.pack.js",
+        "src/jquery.fancybox-plus.js",
+        "css/jquery.fancybox-plus.css"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "components"
+    ],
+    "bugs": "https://github.com/igorlino/fancybox-plus/issues",
+    "homepage": "http://igorlino.github.io/fancybox-plus/",
+    "docs": "http://igorlino.github.io/fancybox-plus/examples",
+    "demo": "http://igorlino.github.io/fancybox-plus/examples",
+    "dependencies": {
+        "jquery": ">=1.11.2"
+    },
+    "keywords": [
+        "modal",
+        "lightbox",
+        "gallery",
+        "popup",
+        "ui",
+        "jquery-plugin"
+    ]
+}
