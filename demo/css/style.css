@@ -19,7 +19,7 @@ html, body {
 body {
 	color: #3e3e3e;
 	font: normal 12px Verdana,"lucida console",sans-serif;
-	background: #15081f url('../images/bg.jpg') top center no-repeat;
+	background: #F0F0F0 url('../images/bg.jpg') top center no-repeat;
 }
 
 .clear {
@@ -78,16 +78,16 @@ a:hover {
 }
 
 #header ul li a {
-	color: #FFF;
-	font-size: 13px;
+	color: #4E78A0;
+	font-size: 15px;
 	font-family: Arial;
 	text-decoration: none;
-	text-shadow: 1px 1px 1px #222222;
+	/*text-shadow: 1px 1px 1px #222222;*/
 	position: relative;
 }
 
 #header ul li a.active, #header ul li a:hover {
-	border-bottom: 1px solid #FFF;
+	border-bottom: 1px solid #4E78A0;
 }
 
 #col_wrap {
