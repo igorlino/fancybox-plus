@@ -7,7 +7,7 @@
 
 - Modal
 - Easing
-- JQuery plug-in
+- JQuery plug-in. Supports JQuery 1.9.
 - Integration to latest jQuery [Mouse Wheel Plugin](https://github.com/jquery/jquery-mousewheel)
 - Angular directive available at [angular-fancybox-plus](https://github.com/igorlino/angular-fancybox-plus)
 

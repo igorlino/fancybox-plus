@@ -23,7 +23,7 @@
 
         titleHeight = 0, titleStr = '', start_pos, final_pos, busy = false, fx = $.extend($('<div/>')[0], {prop: 0}),
 
-        isIE6 = $.browser.msie && $.browser.version < 7 && !window.XMLHttpRequest,
+        isIE6 = navigator.userAgent.match(/msie [6]/i) && !window.XMLHttpRequest,
 
     /*
      * Private methods
@@ -609,7 +609,8 @@
             }
 
             if (currentOpts.type == 'iframe') {
-                $('<iframe id="fbplus-frame" name="fbplus-frame' + new Date().getTime() + '" frameborder="0" hspace="0" ' + ($.browser.msie ? 'allowtransparency="true""' : '') + ' scrolling="' + selectedOpts.scrolling + '" src="' + currentOpts.href + '"></iframe>').appendTo(content);
+                $('<iframe id="fbplus-frame" name="fbplus-frame' + new Date().getTime() + '" frameborder="0" hspace="0" ' +
+                    (navigator.userAgent.match(/msie [6]/i) ? 'allowtransparency="true""' : '') + ' scrolling="' + selectedOpts.scrolling + '" src="' + currentOpts.href + '"></iframe>').appendTo(content);
             }
 
             wrap.show();
