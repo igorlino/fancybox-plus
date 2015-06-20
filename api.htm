@@ -1,34 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<title>Fancybox - Fancy jQuery lightbox alternative| API &amp; Options</title>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="http://fancybox.net/js/fancybox-1.3.4/jquery.easing-1.3.pack.js"></script>
-	<script type="text/javascript" src="http://fancybox.net/js/fancybox-1.3.4/jquery.mousewheel-3.0.4.pack.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <title>Fancybox Plus - Fancy jQuery lightbox alternative</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.js"></script>
 
-	<script type="text/javascript" src="http://fancybox.net/js/fancybox-1.3.4/jquery.fancybox-1.3.4.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://fancybox.net/js/fancybox-1.3.4/jquery.fancybox-1.3.4.css" media="screen" />
+	<script type="text/javascript" src="https://rawgit.com/igorlino/fancybox-plus/master/src/jquery.fancybox-plus.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://rawgit.com/igorlino/fancybox-plus/master/css/jquery.fancybox-plus.css" media="screen" />
+	<!--<script type="text/javascript" src="../src/jquery.fancybox-plus.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-plus.css" media="screen" />-->
 
-	<link rel="stylesheet" type="text/css" href="http://fancybox.net/css/style.css" media="screen" />
-	<script type="text/javascript" src="http://fancybox.net/js/web.js?m=20100203"></script>
-<!--[if IE 6]>
-	<script src="http://fancybox.net/js/DD_belatedPNG_0.0.8a-min.js"></script>
-	<script>
-		DD_belatedPNG.fix('.png_bg');
-	</script>
-<![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="js/web.js?m=20100203"></script>
+    <!--[if IE 6]>
+    <script src="https://rawgit.com/plus2/DD_belatedPNG/master/DD_belatedPNG_0.0.8a.js"></script>
+
+    <script>
+        DD_belatedPNG.fix('.png_bg');
+    </script>
+    <![endif]-->
 	<script src="http://fancybox.net/js/cufon-yui.js" type="text/javascript"></script>
 	<script src="http://fancybox.net/js/Museo_300_300.font.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		Cufon.replace('h1');
+        Cufon.replace('h1', {color: '#4682B4'});
 	</script>
 </head>
 <body>
 	<div id="page">
 		<div id="header">
-		    <h1><a href="/">fancybox</a></h1>
+		    <h1><a href="index.html">fancybox-<b>Plus</b></a></h1>
 		    <ul>
 				<li><a  href="index.html">Home</a></li>
 				<li><a  href="howto.htm">How to use</a></li>
@@ -42,23 +46,14 @@
 	 	<div id="col_wrap">
 	 		<div id="col_top"></div>
 			<div id="col_left">
-	            <div class="warn">
-	<h2>Warning!</h2>
-	<p>
-		These are options for 1.3+, for versions 1.2+ <a href="http://fancybox.net/api/126">look there</a>
-	</p>
-	<p style="font-size:130%;">
-		Documention for <b>fancyBox2</b> is available at <a href="http://fancyapps.com/fancybox/#docs">fancyapps.com</a>
-	</p>
-</div>
 
 
 <h1>Available options</h1>
 
 <p>
-	You can pass options as key/value object to fancybox() function or modify them at the bottom of FancyBox JS file.
+	You can pass options as key/value object to fancyboxPlus() function or modify them at the bottom of FancyBox-Plus JS file.
 </p>
- 
+
 <table width="100%" class="options" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
@@ -71,12 +66,12 @@
 <tr>
 	<td>padding</td>
 	<td>10</td>
-	<td>Space between FancyBox wrapper and content</td>
+	<td>Space between FancyBox-Plus wrapper and content</td>
 </tr>
 <tr>
 	<td>margin</td>
 	<td>20</td>
-	<td>Space between viewport and FancyBox wrapper</td>
+	<td>Space between viewport and FancyBox-Plus wrapper</td>
 </tr>
 <tr>
 	<td>opacity</td>
@@ -113,7 +108,7 @@
 <tr>
 	<td>autoScale</td>
 	<td>true</td>
-	<td>If true, FancyBox is scaled to fit in viewport </td>
+	<td>If true, FancyBox-Plus is scaled to fit in viewport </td>
 </tr>
 <tr>
 	<td>autoDimensions</td>
@@ -123,14 +118,14 @@
 <tr class="sep">
 	<td>centerOnScroll</td>
 	<td>false</td>
-	<td>When true, FancyBox is centered while scrolling page</td>
+	<td>When true, FancyBox-Plus is centered while scrolling page</td>
 </tr>
 
 
 <tr>
 	<td>ajax</td>
 	<td>{ }</td>
-	<td>Ajax options <br /><small> Note: 'error' and 'success' will be overwritten by FancyBox </small></td>
+	<td>Ajax options <br /><small> Note: 'error' and 'success' will be overwritten by FancyBox-Plus </small></td>
 </tr>
 <tr class="sep">
 	<td>swf</td>
@@ -247,7 +242,7 @@
 <tr>
 	<td>onClosed</td>
 	<td>null</td>
-	<td>Will be called once FancyBox is closed</td>
+	<td>Will be called once FancyBox-Plus is closed</td>
 </tr>
 </tbody>
 </table>
@@ -294,7 +289,7 @@
 
 <h1>Public Methods</h1>
 
-<p>FancyBox provides some function to work with it</p>
+<p>FancyBox-Plus provides some function to work with it</p>
 
 <table width="100%" class="options" cellpadding="0" cellspacing="0">
 <thead>
@@ -305,40 +300,40 @@
 </thead>
 <tbody>
 <tr>
-	<td>$.fancybox.showActivity</td>
+	<td>$.fancyboxPlus.showActivity</td>
 	<td>Shows loading animation</td>
 </tr>
 <tr>
-	<td>$.fancybox.hideActivity</td>
+	<td>$.fancyboxPlus.hideActivity</td>
 	<td>Hides loading animation</td>
 </tr>
 <tr>
-	<td>$.fancybox.next</td>
+	<td>$.fancyboxPlus.next</td>
 	<td>Displays the next gallery item</td>
 </tr>
 <tr>
-	<td>$.fancybox.prev</td>
+	<td>$.fancyboxPlus.prev</td>
 	<td>Displays the previous gallery item</td>
 </tr>
 <tr>
-	<td>$.fancybox.pos</td>
+	<td>$.fancyboxPlus.pos</td>
 	<td>Displays item by index from gallery</td>
 </tr>
 <tr>
-	<td>$.fancybox.cancel</td>
+	<td>$.fancyboxPlus.cancel</td>
 	<td>Cancels loading content</td>
 </tr>
 <tr>
-	<td>$.fancybox.close</td>
-	<td>Hides FancyBox <br /><small>Within an iframe use - parent.$.fancybox.close();</small></td>
+	<td>$.fancyboxPlus.close</td>
+	<td>Hides FancyBox-Plus <br /><small>Within an iframe use - parent.$.fancyboxPlus.close();</small></td>
 </tr>
 <tr>
-	<td>$.fancybox.resize</td>
-	<td>Auto-resizes FancyBox height to match height of content </td>
+	<td>$.fancyboxPlus.resize</td>
+	<td>Auto-resizes FancyBox-Plus height to match height of content </td>
 </tr>
 <tr>
-	<td>$.fancybox.center</td>
-	<td>Centers FancyBox in viewport</td>
+	<td>$.fancyboxPlus.center</td>
+	<td>Centers FancyBox-Plus in viewport</td>
 </tr>
 </tbody>
 </table>
@@ -347,41 +342,16 @@
 			<div id="col_right">
 				<div id="col_sep">
 
-					<!-- <a href="http://fancybox.googlecode.com/files/jquery.fancybox-1.3.4.zip"><img alt="Download" src="/img/download.gif" /></a> -->
+                    <p><b>Current Release</b><br /><a href="">Version</b> 1.3.5 (20.06.2015)</a></p>
 
-					<p><b>Past Release</b><br /><a href="http://fancybox.googlecode.com/files/jquery.fancybox-1.3.4.zip">Version</b> 1.3.4 (2010/11/11)</a></p>
+					<p><a href="https://github.com/igorlino/fancybox-plus/blob/master/CHANGELOG.md">Changelog</a></p>
 
-					<p><a href="/changelog/">Changelog</a></p>
-
-					<form id="donate_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<p>
-							<input type="hidden" name="cmd" value="_donations" />
-							<input type="hidden" name="business" value="janis.skarnelis@gmail.com" />
-							<input type="hidden" name="item_name" value="FancyBox" />
-							<input type="hidden" name="amount" value="10.00" />
-							<input type="hidden" name="no_shipping" value="0" />
-							<input type="hidden" name="no_note" value="1" />
-							<input type="hidden" name="currency_code" value="EUR" />
-							<input type="hidden" name="tax" value="0" />
-							<input type="hidden" name="lc" value="LV" />
-							<input type="hidden" name="bn" value="PP-DonationsBF" />
-
-
-										</p>
-						<p>
-							<b><a id="donate" href="javascript:;" style="font-size:120%">Donate</a></b>
-						</p>
-					</form>
 
 			   </div>
 
 			   <div id="adblock">
 
 					<h2>Our Sponsors</h2>
-
-<script type="text/javascript" src="http://cdn.adpacks.com/adpacks.js?legacyid=1255513&zoneid=1386&key=439877dd0926c71f4ca8c574860a4ef8&serve=C6SI42Y&placement=fancyboxnet&circle=dev" id="_adpacks_js"></script>
-
-
 
 
 	            </div>
@@ -392,19 +362,9 @@
 
 		<div id="col_bottom"></div>
 
-		<div id="footer">
-		    <p>Contact: info <span>[at]</span>  fancybox <span>[dot]</span> net &nbsp;&nbsp; /please, don`t send emails for help, use <a href="http://groups.google.com/group/fancybox">support forum</a> instead</p>
-	        <p>(c) 2008 - 2015 / fancybox.net</p>
-		</div>
+        <div id="footer">
+            <p>Contact: info <span>[at]</span>  <a href="http://igorlino.github.io/fancybox-plus/fancybox">issues</a> &nbsp;&nbsp; /please, don`t send emails for help, use <a href="https://github.com/igorlino/fancybox-plus/issues">issues</a> instead</p>
+        </div>
 	</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-4230547-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
 </body>
 </html>
