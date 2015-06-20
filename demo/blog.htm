@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="imagetoolbar" content="no" />
-    <title>Fancybox - Fancy jQuery lightbox alternative</title>
+    <title>Fancybox Plus - Fancy jQuery lightbox alternative</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.js"></script>
@@ -32,7 +32,7 @@
 <body>
 	<div id="page">
 		<div id="header">
-		    <h1><a href="/">fancybox <b>Plus</b></a></h1>
+		    <h1><a href="index.html">fancybox <b>Plus</b></a></h1>
 		    <ul>
 				<li><a  href="index.html">Home</a></li>
 				<li><a  href="howto.htm">How to use</a></li>
@@ -57,10 +57,10 @@
 	<p>JavaScript</p>
 
 	<pre><code>function formatTitle(title, currentArray, currentIndex, currentOpts) {
-    return '&lt;div id=&quot;tip7-title&quot;&gt;&lt;span&gt;&lt;a href=&quot;javascript:;&quot; onclick=&quot;$.fancybox.close();&quot;&gt;&lt;img src=&quot;/data/closelabel.gif&quot; /&gt;&lt;/a&gt;&lt;/span&gt;' + (title &amp;&amp; title.length ? '&lt;b&gt;' + title + '&lt;/b&gt;' : '' ) + 'Image ' + (currentIndex + 1) + ' of ' + currentArray.length + '&lt;/div&gt;';
+    return '&lt;div id=&quot;tip7-title&quot;&gt;&lt;span&gt;&lt;a href=&quot;javascript:;&quot; onclick=&quot;$.fancyboxPlus.close();&quot;&gt;&lt;img src=&quot;/data/closelabel.gif&quot; /&gt;&lt;/a&gt;&lt;/span&gt;' + (title &amp;&amp; title.length ? '&lt;b&gt;' + title + '&lt;/b&gt;' : '' ) + 'Image ' + (currentIndex + 1) + ' of ' + currentArray.length + '&lt;/div&gt;';
 }
 
-$(".tip7").fancybox({
+$(".tip7").fancyboxPlus({
 	'showCloseButton'	: false,
 	'titlePosition' 		: 'inside',
 	'titleFormat'		: formatTitle
@@ -99,7 +99,7 @@ $(".tip7").fancybox({
     <p>Alternative method is to use manual call</p>
 
     <pre><code>jQuery(document).ready(function() {
-	$.fancybox(
+	$.fancyboxPlus(
 		'&lt;h2&gt;Hi!&lt;/h2&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque&lt;/p&gt;',
 		{
         		'autoDimensions'	: false,
@@ -139,7 +139,7 @@ $(".tip7").fancybox({
 
 <p>Attach FancyBox: </p>
 
-<pre><code>$("#tip5").fancybox({
+<pre><code>$("#tip5").fancyboxPlus({
 	'scrolling'		: 'no',
 	'titleShow'		: false,
 	'onClosed'		: function() {
@@ -153,11 +153,11 @@ $(".tip7").fancybox({
 
 	if ($("#login_name").val().length < 1 || $("#login_pass").val().length < 1) {
 	    $("#login_error").show();
-	    $.fancybox.resize();
+	    $.fancyboxPlus.resize();
 	    return false;
 	}
 
-	$.fancybox.showActivity();
+	$.fancyboxPlus.showActivity();
 
 	$.ajax({
 		type		: "POST",
@@ -165,7 +165,7 @@ $(".tip7").fancybox({
 		url		: "/data/login.php",
 		data		: $(this).serializeArray(),
 		success: function(data) {
-			$.fancybox(data);
+			$.fancyboxPlus(data);
 		}
 	});
 
@@ -199,7 +199,7 @@ $(".tip7").fancybox({
 
 	<p>This script also enables full screen mode if video's href has the parameter &fs=1 </p>
 <pre><code>$("#tip4").click(function() {
-	$.fancybox({
+	$.fancyboxPlus({
 			'padding'		: 0,
 			'autoScale'		: false,
 			'transitionIn'	: 'none',
@@ -223,13 +223,13 @@ $(".tip7").fancybox({
 <div class="list">
 	<p class="h"><span>3.</span> Show/hide title on hover. <a id="tip3" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus mauris elit. Sed at quam nisl. Etiam velit felis, semper sed tincidunt vitae, pulvinar non ante." href="http://farm5.static.flickr.com/4058/4252054277_f0fa91e026.jpg">Try now</a></p>
 
-<pre><code>$("#tip3").fancybox({
+<pre><code>$("#tip3").fancyboxPlus({
 	'titlePosition'	:	'over',
 	'onComplete'	:	function() {
-		$("#fancybox-wrap").hover(function() {
-			$("#fancybox-title").show();
+		$("#fbplus-wrap").hover(function() {
+			$("#fbplus-title").show();
 		}, function() {
-			$("#fancybox-title").hide();
+			$("#fbplus-title").hide();
 		});
 	}
 });</code></pre>
@@ -239,18 +239,18 @@ $(".tip7").fancybox({
 <div class="list">
 	<p class="h"><span>2.</span> Select all anchor tags that contain image tags</p>
 
-	<pre><code>$("a:has(img)").fancybox();</code></pre>
+	<pre><code>$("a:has(img)").fancyboxPlus();</code></pre>
 
 	<p>Alternative method - apply Fancybox to only those &lt;a&gt; tags that have href  attributes that end with .jpg, .png or .gif:</p>
 
-	<pre><code>$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").fancybox();</code></pre>
+	<pre><code>$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").fancyboxPlus();</code></pre>
 </div>
 
 
 <div class="list">
 	<p class="h"><span>1.</span> Create gallery from jQuery object collection</p>
 
-	<pre><code>$("a.fancybox").attr('rel', 'gallery').fancybox();</code></pre>
+	<pre><code>$("a.fancybox").attr('rel', 'gallery').fancyboxPlus();</code></pre>
 </div>
 
 
@@ -263,9 +263,9 @@ $(".tip7").fancybox({
 http://jquery.diaz-cornen.com/fancybox/index_map.html
 
 if ($.support.opacity) {
-			$("#fancybox-outer").css({
+			$("#fbplus-outer").css({
 				'backgroundColor'	: "transparent",
-				'backgroundImage'	: "url(/scripts/web/fancybox/fancy_bg.png)"
+				'backgroundImage'	: "url(/scripts/web/fbplus/fbplus_bg.png)"
 			});
 		}
 
@@ -277,31 +277,9 @@ if ($.support.opacity) {
 			<div id="col_right">
 				<div id="col_sep">
 
-					<!-- <a href="http://fancybox.googlecode.com/files/jquery.fancybox-1.3.4.zip"><img alt="Download" src="/img/download.gif" /></a> -->
-
-					<p><b>Past Release</b><br /><a href="http://fancybox.googlecode.com/files/jquery.fancybox-1.3.4.zip">Version</b> 1.3.4 (2010/11/11)</a></p>
+                    <p><b>Current Release</b><br /><a href="">Version</b> 1.3.5 (20.06.2015)</a></p>
 
 					<p><a href="/changelog/">Changelog</a></p>
-
-					<form id="donate_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<p>
-							<input type="hidden" name="cmd" value="_donations" />
-							<input type="hidden" name="business" value="janis.skarnelis@gmail.com" />
-							<input type="hidden" name="item_name" value="FancyBox" />
-							<input type="hidden" name="amount" value="10.00" />
-							<input type="hidden" name="no_shipping" value="0" />
-							<input type="hidden" name="no_note" value="1" />
-							<input type="hidden" name="currency_code" value="EUR" />
-							<input type="hidden" name="tax" value="0" />
-							<input type="hidden" name="lc" value="LV" />
-							<input type="hidden" name="bn" value="PP-DonationsBF" />
-
-
-										</p>
-						<p>
-							<b><a id="donate" href="javascript:;" style="font-size:120%">Donate</a></b>
-						</p>
-					</form>
 
 			   </div>
 
@@ -309,7 +287,6 @@ if ($.support.opacity) {
 
 					<h2>Our Sponsors</h2>
 
-<script type="text/javascript" src="http://cdn.adpacks.com/adpacks.js?legacyid=1255513&zoneid=1386&key=439877dd0926c71f4ca8c574860a4ef8&serve=C6SI42Y&placement=fancyboxnet&circle=dev" id="_adpacks_js"></script>
 
 
 
@@ -323,18 +300,8 @@ if ($.support.opacity) {
 		<div id="col_bottom"></div>
 
 		<div id="footer">
-		    <p>Contact: info <span>[at]</span>  fancybox <span>[dot]</span> net &nbsp;&nbsp; /please, don`t send emails for help, use <a href="http://groups.google.com/group/fancybox">support forum</a> instead</p>
-	        <p>(c) 2008 - 2015 / fancybox.net</p>
+		    <p>Contact: info <span>[at]</span>  <a href="http://igorlino.github.io/fancybox-plus/fancybox">issues</a> &nbsp;&nbsp; /please, don`t send emails for help, use <a href="https://github.com/igorlino/fancybox-plus/issues">issues</a> instead</p>
 		</div>
 	</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-4230547-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
 </body>
 </html>

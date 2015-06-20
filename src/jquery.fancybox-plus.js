@@ -53,7 +53,7 @@
             selectedOpts.width = 'auto';
             selectedOpts.height = 'auto';
 
-            tmp.html('<p id="fancybox-error">The requested content cannot be loaded.<br />Please try again later.</p>');
+            tmp.html('<p id="fbplus-error">The requested content cannot be loaded.<br />Please try again later.</p>');
 
             _process_inline();
         },
@@ -160,7 +160,7 @@
 
             tmp.css('padding', (selectedOpts.padding + selectedOpts.margin));
 
-            $('.fancybox-inline-tmp').unbind('fancybox-cancel').bind('fancybox-change', function () {
+            $('.fbplus-inline-tmp').unbind('fbplus-cancel').bind('fbplus-change', function () {
                 $(this).replaceWith(content.children());
             });
 
@@ -171,17 +171,17 @@
                     break;
 
                 case 'inline' :
-                    if ($(obj).parent().is('#fancybox-content') === true) {
+                    if ($(obj).parent().is('#fbplus-content') === true) {
                         busy = false;
                         return;
                     }
 
-                    $('<div class="fancybox-inline-tmp" />')
+                    $('<div class="fbplus-inline-tmp" />')
                         .hide()
                         .insertBefore($(obj))
-                        .bind('fancybox-cleanup', function () {
+                        .bind('fbplus-cleanup', function () {
                             $(this).replaceWith(content.children());
-                        }).bind('fancybox-cancel', function () {
+                        }).bind('fbplus-cancel', function () {
                             $(this).replaceWith(tmp.children());
                         });
 
@@ -305,7 +305,7 @@
             selectedOpts.height = imgPreloader.height;
 
             $("<img />").attr({
-                'id': 'fancybox-img',
+                'id': 'fbplus-img',
                 'src': imgPreloader.src,
                 'alt': selectedOpts.title
             }).appendTo(tmp);
@@ -319,7 +319,7 @@
             loading.hide();
 
             if (wrap.is(":visible") && false === currentOpts.onCleanup(currentArray, currentIndex, currentOpts)) {
-                $.event.trigger('fancybox-cancel');
+                $.event.trigger('fbplus-cancel');
 
                 busy = false;
                 return;
@@ -350,9 +350,9 @@
 
                 if (!overlay.is(':visible')) {
                     if (isIE6) {
-                        $('select:not(#fancybox-tmp select)').filter(function () {
+                        $('select:not(#fbplus-tmp select)').filter(function () {
                             return this.style.visibility !== 'hidden';
-                        }).css({'visibility': 'hidden'}).one('fancybox-cleanup', function () {
+                        }).css({'visibility': 'hidden'}).one('fbplus-cleanup', function () {
                             this.style.visibility = 'inherit';
                         });
                     }
@@ -386,7 +386,7 @@
                         content.html(tmp.contents()).fadeTo(currentOpts.changeFade, 1, _finish);
                     };
 
-                    $.event.trigger('fancybox-change');
+                    $.event.trigger('fbplus-change');
 
                     content
                         .empty()
@@ -461,10 +461,10 @@
         _format_title = function (title) {
             if (title && title.length) {
                 if (currentOpts.titlePosition == 'float') {
-                    return '<table id="fancybox-title-float-wrap" cellpadding="0" cellspacing="0"><tr><td id="fancybox-title-float-left"></td><td id="fancybox-title-float-main">' + title + '</td><td id="fancybox-title-float-right"></td></tr></table>';
+                    return '<table id="fbplus-title-float-wrap" cellpadding="0" cellspacing="0"><tr><td id="fbplus-title-float-left"></td><td id="fbplus-title-float-main">' + title + '</td><td id="fbplus-title-float-right"></td></tr></table>';
                 }
 
-                return '<div id="fancybox-title-' + currentOpts.titlePosition + '">' + title + '</div>';
+                return '<div id="fbplus-title-' + currentOpts.titlePosition + '">' + title + '</div>';
             }
 
             return false;
@@ -492,7 +492,7 @@
             }
 
             title
-                .addClass('fancybox-title-' + currentOpts.titlePosition)
+                .addClass('fbplus-title-' + currentOpts.titlePosition)
                 .html(titleStr)
                 .appendTo('body')
                 .show();
@@ -609,7 +609,7 @@
             }
 
             if (currentOpts.type == 'iframe') {
-                $('<iframe id="fancybox-frame" name="fancybox-frame' + new Date().getTime() + '" frameborder="0" hspace="0" ' + ($.browser.msie ? 'allowtransparency="true""' : '') + ' scrolling="' + selectedOpts.scrolling + '" src="' + currentOpts.href + '"></iframe>').appendTo(content);
+                $('<iframe id="fbplus-frame" name="fbplus-frame' + new Date().getTime() + '" frameborder="0" hspace="0" ' + ($.browser.msie ? 'allowtransparency="true""' : '') + ' scrolling="' + selectedOpts.scrolling + '" src="' + currentOpts.href + '"></iframe>').appendTo(content);
             }
 
             wrap.show();
@@ -909,7 +909,7 @@
 
         busy = true;
 
-        $.event.trigger('fancybox-cancel');
+        $.event.trigger('fbplus-cancel');
 
         _abort();
 
@@ -954,7 +954,7 @@
             title.empty().hide();
             wrap.hide();
 
-            $.event.trigger('fancybox-cleanup');
+            $.event.trigger('fbplus-cleanup');
 
             content.empty();
 
@@ -1030,28 +1030,28 @@
     };
 
     $.fancyboxPlus.init = function () {
-        if ($("#fancybox-wrap").length) {
+        if ($("#fbplus-wrap").length) {
             return;
         }
 
         $('body').append(
-            tmp = $('<div id="fancybox-tmp"></div>'),
-            loading = $('<div id="fancybox-loading"><div></div></div>'),
-            overlay = $('<div id="fancybox-overlay"></div>'),
-            wrap = $('<div id="fancybox-wrap"></div>')
+            tmp = $('<div id="fbplus-tmp"></div>'),
+            loading = $('<div id="fbplus-loading"><div></div></div>'),
+            overlay = $('<div id="fbplus-overlay"></div>'),
+            wrap = $('<div id="fbplus-wrap"></div>')
         );
 
-        outer = $('<div id="fancybox-outer"></div>')
-            .append('<div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div>')
+        outer = $('<div id="fbplus-outer"></div>')
+            .append('<div class="fbplus-bg" id="fbplus-bg-n"></div><div class="fbplus-bg" id="fbplus-bg-ne"></div><div class="fbplus-bg" id="fbplus-bg-e"></div><div class="fbplus-bg" id="fbplus-bg-se"></div><div class="fbplus-bg" id="fbplus-bg-s"></div><div class="fbplus-bg" id="fbplus-bg-sw"></div><div class="fbplus-bg" id="fbplus-bg-w"></div><div class="fbplus-bg" id="fbplus-bg-nw"></div>')
             .appendTo(wrap);
 
         outer.append(
-            content = $('<div id="fancybox-content"></div>'),
-            close = $('<a id="fancybox-close"></a>'),
-            title = $('<div id="fancybox-title"></div>'),
+            content = $('<div id="fbplus-content"></div>'),
+            close = $('<a id="fbplus-close"></a>'),
+            title = $('<div id="fbplus-title"></div>'),
 
-            nav_left = $('<a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a>'),
-            nav_right = $('<a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a>')
+            nav_left = $('<a href="javascript:;" id="fbplus-left"><span class="fancy-ico" id="fbplus-left-ico"></span></a>'),
+            nav_right = $('<a href="javascript:;" id="fbplus-right"><span class="fancy-ico" id="fbplus-right-ico"></span></a>')
         );
 
         close.click($.fancyboxPlus.close);
@@ -1080,14 +1080,14 @@
         }
 
         if (!$.support.opacity) {
-            wrap.addClass('fancybox-ie');
+            wrap.addClass('fbplus-ie');
         }
 
         if (isIE6) {
-            loading.addClass('fancybox-ie6');
-            wrap.addClass('fancybox-ie6');
+            loading.addClass('fbplus-ie6');
+            wrap.addClass('fbplus-ie6');
 
-            $('<iframe id="fancybox-hide-sel-frame" src="' + (/^https/i.test(window.location.href || '') ? 'javascript:void(false)' : 'about:blank' ) + '" scrolling="no" border="0" frameborder="0" tabindex="-1"></iframe>').prependTo(outer);
+            $('<iframe id="fbplus-hide-sel-frame" src="' + (/^https/i.test(window.location.href || '') ? 'javascript:void(false)' : 'about:blank' ) + '" scrolling="no" border="0" frameborder="0" tabindex="-1"></iframe>').prependTo(outer);
         }
     };
 

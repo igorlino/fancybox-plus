@@ -226,7 +226,7 @@ body #bsap_aplink,body #bsap_aplink:hover{display:block;font-size:10px;margin:12
 }
 
 #footer {
-	color: #FFF;
+	color: #75A1D0;
 	padding: 10px 30px 50px 30px;
 }
 
@@ -236,7 +236,7 @@ body #bsap_aplink,body #bsap_aplink:hover{display:block;font-size:10px;margin:12
 }
 
 #footer p a {
-	color: #FFF;
+	color: #75A1D0;
 }
 
 #footer p a:hover {
@@ -403,3 +403,4 @@ form p {
 #tip7-title span {
     float: right;
 }
+
