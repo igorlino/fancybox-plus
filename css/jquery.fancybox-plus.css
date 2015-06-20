@@ -31,7 +31,7 @@
     left: 0;
     width: 40px;
     height: 480px;
-    background-image: url('../images/fbplus.png');
+    background-image: url('../images/fbplus/fbplus.png');
 }
 
 #fbplus-overlay {
@@ -95,7 +95,7 @@
     right: -15px;
     width: 30px;
     height: 30px;
-    background: transparent url('../images/fbplus.png') -40px 0px;
+    background: transparent url('../images/fbplus/fbplus.png') -40px 0px;
     cursor: pointer;
     z-index: 1103;
     display: none;
@@ -133,7 +133,7 @@
     width: 35%;
     cursor: pointer;
     outline: none;
-    background: transparent url('../images/blank.gif');
+    background: transparent url('../images/fbplus/blank.gif');
     z-index: 1102;
     display: none;
 }
@@ -159,12 +159,12 @@
 }
 
 #fbplus-left-ico {
-    background-image: url('../images/fbplus.png');
+    background-image: url('../images/fbplus/fbplus.png');
     background-position: -40px -30px;
 }
 
 #fbplus-right-ico {
-    background-image: url('../images/fbplus.png');
+    background-image: url('../images/fbplus/fbplus.png');
     background-position: -40px -60px;
 }
 
@@ -195,13 +195,13 @@
     top: -20px;
     left: 0;
     width: 100%;
-    background-image: url('../images/fbplus-x.png');
+    background-image: url('../images/fbplus/fbplus-x.png');
 }
 
 #fbplus-bg-ne {
     top: -20px;
     right: -20px;
-    background-image: url('../images/fbplus.png');
+    background-image: url('../images/fbplus/fbplus.png');
     background-position: -40px -162px;
 }
 
@@ -209,14 +209,14 @@
     top: 0;
     right: -20px;
     height: 100%;
-    background-image: url('../images/fbplus-y.png');
+    background-image: url('../images/fbplus/fbplus-y.png');
     background-position: -20px 0px;
 }
 
 #fbplus-bg-se {
     bottom: -20px;
     right: -20px;
-    background-image: url('../images/fbplus.png');
+    background-image: url('../images/fbplus/fbplus.png');
     background-position: -40px -182px;
 }
 
@@ -224,14 +224,14 @@
     bottom: -20px;
     left: 0;
     width: 100%;
-    background-image: url('../images/fbplus-x.png');
+    background-image: url('../images/fbplus/fbplus-x.png');
     background-position: 0px -20px;
 }
 
 #fbplus-bg-sw {
     bottom: -20px;
     left: -20px;
-    background-image: url('../images/fbplus.png');
+    background-image: url('../images/fbplus/fbplus.png');
     background-position: -40px -142px;
 }
 
@@ -239,13 +239,13 @@
     top: 0;
     left: -20px;
     height: 100%;
-    background-image: url('../images/fbplus-y.png');
+    background-image: url('../images/fbplus/fbplus-y.png');
 }
 
 #fbplus-bg-nw {
     top: -20px;
     left: -20px;
-    background-image: url('../images/fbplus.png');
+    background-image: url('../images/fbplus/fbplus.png');
     background-position: -40px -122px;
 }
 
@@ -278,7 +278,7 @@
 
 #fbplus-title-over {
     padding: 10px;
-    background-image: url('../images/fbplus_title_over.png');
+    background-image: url('../images/fbplus/fbplus_title_over.png');
     display: block;
 }
 
@@ -302,7 +302,7 @@
 
 #fbplus-title-float-left {
     padding: 0 0 0 15px;
-    background: url('../images/fbplus.png') -40px -90px no-repeat;
+    background: url('../images/fbplus/fbplus.png') -40px -90px no-repeat;
 }
 
 #fbplus-title-float-main {
@@ -310,50 +310,50 @@
     line-height: 29px;
     font-weight: bold;
     padding: 0 0 3px 0;
-    background: url('../images/fbplus-x.png') 0px -40px;
+    background: url('../images/fbplus/fbplus-x.png') 0px -40px;
 }
 
 #fbplus-title-float-right {
     padding: 0 0 0 15px;
-    background: url('../images/fbplus.png') -55px -90px no-repeat;
+    background: url('../images/fbplus/fbplus.png') -55px -90px no-repeat;
 }
 
 /* IE6 */
 
 .fbplus-ie6 #fbplus-close {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_close.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_close.png', sizingMethod='scale');
 }
 
 .fbplus-ie6 #fbplus-left-ico {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_nav_left.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_nav_left.png', sizingMethod='scale');
 }
 
 .fbplus-ie6 #fbplus-right-ico {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_nav_right.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_nav_right.png', sizingMethod='scale');
 }
 
 .fbplus-ie6 #fbplus-title-over {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_title_over.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_title_over.png', sizingMethod='scale');
     zoom: 1;
 }
 
 .fbplus-ie6 #fbplus-title-float-left {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_title_left.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_title_left.png', sizingMethod='scale');
 }
 
 .fbplus-ie6 #fbplus-title-float-main {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_title_main.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_title_main.png', sizingMethod='scale');
 }
 
 .fbplus-ie6 #fbplus-title-float-right {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_title_right.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_title_right.png', sizingMethod='scale');
 }
 
 .fbplus-ie6 #fbplus-bg-w, .fbplus-ie6 #fbplus-bg-e, .fbplus-ie6 #fbplus-left, .fbplus-ie6 #fbplus-right, #fbplus-hide-sel-frame {
@@ -368,7 +368,7 @@
 
 #fbplus-loading.fbplus-ie6 div {
     background: transparent;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_loading.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_loading.png', sizingMethod='scale');
 }
 
 /* IE6, IE7, IE8 */
@@ -378,33 +378,33 @@
 }
 
 .fbplus-ie #fbplus-bg-n {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_n.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_n.png', sizingMethod='scale');
 }
 
 .fbplus-ie #fbplus-bg-ne {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_ne.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_ne.png', sizingMethod='scale');
 }
 
 .fbplus-ie #fbplus-bg-e {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_e.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_e.png', sizingMethod='scale');
 }
 
 .fbplus-ie #fbplus-bg-se {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_se.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_se.png', sizingMethod='scale');
 }
 
 .fbplus-ie #fbplus-bg-s {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_s.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_s.png', sizingMethod='scale');
 }
 
 .fbplus-ie #fbplus-bg-sw {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_sw.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_sw.png', sizingMethod='scale');
 }
 
 .fbplus-ie #fbplus-bg-w {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_w.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_w.png', sizingMethod='scale');
 }
 
 .fbplus-ie #fbplus-bg-nw {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus_shadow_nw.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/fbplus/fbplus_shadow_nw.png', sizingMethod='scale');
 }
