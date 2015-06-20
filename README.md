@@ -8,6 +8,7 @@
 - Modal
 - Easing
 - JQuery plug-in
+- Integration to latest jQuery [Mouse Wheel Plugin](https://github.com/jquery/jquery-mousewheel)
 
 ## Installation
 
