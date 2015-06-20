@@ -4,11 +4,11 @@ jQuery(document).ready(function() {
 	*   Examples - images
 	*/
 
-	$("a#example1").fancybox({
+	$("a#example1").fancyboxPlus({
 		'titleShow'     : false
 	});
 
-	$("a#example2").fancybox({
+	$("a#example2").fancyboxPlus({
 		'titleShow'     : false,
 		'transitionIn'	: 'elastic',
 		'transitionOut'	: 'elastic',
@@ -16,23 +16,23 @@ jQuery(document).ready(function() {
 		'easingOut'     : 'easeInBack'
 	});
 
-	$("a#example3").fancybox({
+	$("a#example3").fancyboxPlus({
 	    'titleShow'     : false,
 		'transitionIn'	: 'none',
 		'transitionOut'	: 'none'
 	});
 
-	$("a#example4").fancybox();
+	$("a#example4").fancyboxPlus();
 
-	$("a#example5").fancybox({
+	$("a#example5").fancyboxPlus({
 		'titlePosition'  : 'inside'
 	});
 
-	$("a#example6").fancybox({
+	$("a#example6").fancyboxPlus({
 		'titlePosition'  : 'over'
 	});
 
-	$("a[rel=example_group]").fancybox({
+	$("a[rel=example_group]").fancyboxPlus({
 		'transitionIn'		: 'none',
 		'transitionOut'		: 'none',
 		'titlePosition' 	: 'over',
@@ -45,35 +45,35 @@ jQuery(document).ready(function() {
 	*   Examples - various
 	*/
 
-	$(".various").fancybox({
+	$(".various").fancyboxPlus({
 		'transitionIn'	: 'none',
 		'transitionOut'	: 'none'
 	});
 
-	$("#various1").fancybox({
+	$("#various1").fancyboxPlus({
 		'titlePosition'		: 'inside',
 		'transitionIn'		: 'none',
 		'transitionOut'		: 'none'
 	});
 
-	$("#various2").fancybox({
+	$("#various2").fancyboxPlus({
 		'modal' : true
 	});
 
-	$("#various3").fancybox({
+	$("#various3").fancyboxPlus({
 		ajax : {
 		    type	: "POST",
 		    data	: 'mydata=test'
 		}
 	});
 
-	$("#various4").fancybox({
+	$("#various4").fancyboxPlus({
 		ajax : {
 		    type	: "POST"
 		}
 	});
 
-	$("#various5").fancybox({
+	$("#various5").fancyboxPlus({
 		'width'				: '75%',
 		'height'			: '75%',
         'autoScale'     	: false,
@@ -82,14 +82,14 @@ jQuery(document).ready(function() {
 		'type'				: 'iframe'
 	});
 
-	$("#various6").fancybox({
+	$("#various6").fancyboxPlus({
 	    'padding'           : 0,
         'autoScale'     	: false,
         'transitionIn'		: 'none',
 		'transitionOut'		: 'none'
 	});
 
-	$("#various7").fancybox({
+	$("#various7").fancyboxPlus({
 		onStart		:	function() {
 			return window.confirm('Continue?');
 		},
@@ -107,14 +107,14 @@ jQuery(document).ready(function() {
 		}
 	});
 
-	$("#various8, #various9").fancybox();
+	$("#various8, #various9").fancyboxPlus();
 
 	/*
 	*   Examples - manual call
 	*/
 
 	$("#manual1").click(function() {
-		$.fancybox({
+		$.fancyboxPlus({
 			//'orig'			: $(this),
 			'padding'		: 0,
 			'href'			: 'http://farm9.staticflickr.com/8568/16388772452_f4d77a92c7_b.jpg',
@@ -125,7 +125,7 @@ jQuery(document).ready(function() {
     });
 
     $("#manual2").click(function() {
-		$.fancybox([
+		$.fancyboxPlus([
 			'http://farm8.staticflickr.com/7308/15783866983_27160395b9_b.jpg',
 			'http://farm3.staticflickr.com/2880/10346743894_0cfda8ff7a_b.jpg',
 			{
@@ -145,7 +145,7 @@ jQuery(document).ready(function() {
 	*   Tips & Tricks
 	*/
 
-	$("#tip3").fancybox({
+	$("#tip3").fancyboxPlus({
 	    'transitionIn'	: 'none',
 		'transitionOut'	: 'none',
 		'titlePosition'	: 'over',
@@ -159,7 +159,7 @@ jQuery(document).ready(function() {
 	});
 
 	$("#tip4").click(function() {
-		$.fancybox({
+		$.fancyboxPlus({
 			'padding'		: 0,
 			'autoScale'		: false,
 			'transitionIn'	: 'none',
@@ -178,7 +178,7 @@ jQuery(document).ready(function() {
 		return false;
 	});
 
-    $("#tip5").fancybox({
+    $("#tip5").fancyboxPlus({
 		'scrolling' : 'no',
 		'titleShow'	: false,
 		'onClosed'	: function() {
@@ -202,14 +202,14 @@ jQuery(document).ready(function() {
 			url		: "/data/login.php",
 			data	: $(this).serializeArray(),
 			success: function(data) {
-				$.fancybox(data);
+				$.fancyboxPlus(data);
 			}
 		});
 
 		return false;
 	});
 
-	$("#tip6").fancybox({
+	$("#tip6").fancyboxPlus({
 		'transitionIn'		: 'none',
 		'transitionOut'		: 'none',
 		'autoScale'     	: false,
@@ -223,7 +223,7 @@ jQuery(document).ready(function() {
 	    return '<div id="tip7-title"><span><a href="javascript:;" onclick="$.fancybox.close();"><img src="/data/closelabel.gif" /></a></span>' + (title && title.length ? '<b>' + title + '</b>' : '' ) + 'Image ' + (currentIndex + 1) + ' of ' + currentArray.length + '</div>';
 	}
 
-	$(".tip7").fancybox({
+	$(".tip7").fancyboxPlus({
 	    'showCloseButton'   : false,
 		'titlePosition' 	: 'inside',
 		'titleFormat'		: formatTitle
