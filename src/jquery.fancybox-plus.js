@@ -182,8 +182,8 @@
                         .bind('fbplus-cleanup', function () {
                             $(this).replaceWith(content.children());
                         }).bind('fbplus-cancel', function () {
-                            $(this).replaceWith(tmp.children());
-                        });
+                        $(this).replaceWith(tmp.children());
+                    });
 
                     $(obj).appendTo(tmp);
 
@@ -574,8 +574,8 @@
 
         _finish = function () {
             if (!$.support.opacity) {
-                content.get(0).style.removeAttribute('filter');
-                wrap.get(0).style.removeAttribute('filter');
+                $('#fancybox-content').css('filter', 0);
+                $('#fancybox-wrap').css('filter', 0);
             }
 
             if (selectedOpts.autoDimensions) {
