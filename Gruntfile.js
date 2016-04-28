@@ -50,13 +50,13 @@ module.exports = function (grunt) {
         // Minify definitions
         uglify: {
             my_target: {
-                src: ['dist/jquery.fancybox-plus'],
+                src: ['src/jquery.fancybox-plus.js'],
                 dest: 'dist/jquery.fancybox-plus.min.js'
             },
             options: {
                 banner: '<%= meta.banner %>'
             }
-        }
+        },
 
         // watch for changes to source
         // Better than calling grunt a million times
