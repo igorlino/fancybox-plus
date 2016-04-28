@@ -29,7 +29,7 @@ npm install fancybox-plus
 In a browser:
 
 ```html
-<script src="jquery.fancybox-plus.js"></script>
+<script src="[path-to-fancybox]/dist/jquery.fancybox-plus.js"></script>
 ```
 
 ## Getting Started
