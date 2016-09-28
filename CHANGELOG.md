@@ -1,3 +1,8 @@
+<a name="1.3.9"></a>
+
+# 1.3.8 (28.09.2016)
+- Usr proper bower dependency for jquery easing.
+
 <a name="1.3.8"></a>
 
 # 1.3.8 (28.04.2016)
